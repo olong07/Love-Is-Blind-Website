@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a website about the company Love Is Blind which helps recycle books"> 
+    <meta name="keywords" content="presents, books, loved ones, personalised, gifts"> 
+    <meta name="author" content="Owen Longden"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="assets/imgs/favicon.ico">
+    <title>Love is blind</title>
+
+    <style>
+        p{
+            font-size: 2rem;
+
+        }
+        
+        body{
+                font-family: Arial, Helvetica, sans-serif;
+                overflow-x: hidden;
+        }
+
+        #content{
+            padding:1rem;
+            transition: 1.0s; 
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .slider a, .nav .close {
+            color: #000;
+            font-size: 2rem;
+            text-decoration: none;
+                
+        }
+
+        .nav .close{
+            position: absolute;
+            top: 8px;
+            right:22px;
+            margin-left: 15px;
+            color: #eee;
+        }
+
+        .nav{
+            height: 0%;
+            width: 100%; /*Swap round heigth and width*/
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: black; 
+            overflow-x: hidden;
+            transition: 0.7s;
+        }
+            
+        .nav-items a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #EEE;
+
+        }
+            
+        .nav-items{
+            border-top: solid 1px #eee;
+        }
+
+        .nav-items :last-child{
+            border-bottom: solid 1px #eee;
+        }
+
+        .nav-items a div {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            text-align: center;
+        }
+
+        .nav-items div:hover {
+            background-color: white;
+            color: black;
+            border-radius: 100px;
+            border: 2px solid;
+            border-style: solid;
+            height: auto;
+            width: auto;
+        }
+
+        .dark-mode {
+            background-color: rgba(34, 34, 34, 0.89);
+            color: white;
+        }
+    </style>
+    <script>
+        function Increase() {
+            //document.querySelector("body").innerHTML = "<p>okay, this is jsut a test to see if it works</p>";
+            //var Font = document.querySelector("#text");
+
+            document.querySelector(".intro").style.fontSize = "27px";
+        }
+
+        function Decrease() {
+            //document.querySelector("body").innerHTML = "<p>okay, this is jsut a test to see if it works</p>";
+            document.querySelector(".intro").style.fontSize = "20px"
+        }
+
+        function Normal() {
+            //document.querySelector("body").innerHTML = "<p>okay, this is jsut a test to see if it works</p>";
+            document.querySelector(".intro").style.fontSize = "24px"
+        }
+
+        function openSlideMenu(){
+            if(window.innerWidth > 900 ) {
+                document.getElementById("menu").style.height='26.3%';
+                document.getElementById("content").style.marginTop = '10%';      
+            }
+
+            else if(window.innerWidth <= 900) {
+                document.getElementById("menu").style.height='28.8%'; 
+                document.getElementById("content").style.marginTop = '10%';
+            }
+        }
+
+        function closeSlideMenu(){
+            document.getElementById("menu").style.height='0%';
+            document.getElementById("content").style.marginTop = '0%'; 
+        }
+
+        function switch_mode(){
+        const element1 = document.body;
+        const element2 = document.querySelector("footer");
+        const element3 = document.querySelector(".intro");
+        const element4 = document.querySelector(".book_gifts_preview");
+        element1.classList.toggle('dark-mode');
+        element2.classList.toggle('dark-mode');
+        element3.classList.toggle('dark-mode');
+        element4.classList.toggle('dark-mode');
+        element5.classList.toggle('dark-mode');
+        }
+
+    </script>
+
+
+
+</head>
+
+<body>
+    <header id="NavigationBar" class="body template-bg template-border radius-all">
+        
+        <nav> 
+            <section> 
+            <a href="main.html"><img src="assets/imgs/Company Logo.jpg" id="logo" alt="Logo"></a> 
+            <a href="about us.html"><div>About us </div></a> 
+            <a href="Store.html"><div>Store</div></a> 
+            <a href="locations.html"><div>Locations</div></a> 
+            <a href="contacts.html"><div>Contacts</div></a> 
+            </section>   
+        </nav>
+        
+        <section id="content">
+            <div class="slider">
+                <a href="#" onclick="openSlideMenu()">
+                    &#9776;
+                </a> 
+            </div>
+            
+            <section id="menu" class="nav">
+                <a href="#" class="close" onclick="closeSlideMenu()">
+                    X
+                </a>
+                <div class="nav-items">
+                    <a href="main.html">
+                        <center>
+                            <img src="assets/imgs/Company Logo.jpg" id="logo" alt="Logo">
+                        </center>
+                    </a> 
+                    <a href="about us.html"><div>About us </div></a> 
+                    <a href="Store.html"><div>Store</div></a> 
+                    <a href="locations.html"><div>Locations</div></a> 
+                    <a href="contacts.html"><div>Contacts</div></a> 
+                </div>
+             </section>
+
+    </header>
+</body>
+        
+        
+        
+        
+<body>
+        <section class="intro">
+            <h1>This website is all about the recycling of pre-loved books in a secret santa type gift for your loved ones. Pre loved books can be loved again and do not need to 
+                be thrown away. We here at Love Is Blind attempt to rehome pre loved books to give them a second chance at life in a loving home.
+            </h1>
+
+            <p><img src="assets/imgs/Company Logo.jpg" id="logo_in_text" alt="company logo"></p>
+
+        </section>
+    </main>
+
+    <main>
+        <section class="book_gifts_preview">
+            <h1><img src="assets/imgs/Book Gift Preview.jpg" id="example" alt="An image of a book wrapped in paper with other items in the wrapping"></h1>
+
+        </section>
+    </main>
+
+    <footer>
+        <button onclick="Increase()">Increase Font Size</button>
+        <button onclick="Decrease()">Decrease Font Size</button>
+        <button onclick="Normal()">Normal Font Size</button>
+        <button onclick="switch_mode()">Dark/Light mode</button>
+    </footer>
+</body>

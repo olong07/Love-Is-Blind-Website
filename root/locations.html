@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a website about the company Love Is Blind which helps recycle books"> 
+    <meta name="keywords" content="presents, books, loved ones, personalised, gifts"> 
+    <meta name="author" content="Owen Longden"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon" >
+    <link rel="stylesheet" href="css/locations.css">
+
+    <title>Love is blind</title>
+
+    <style>
+        p{
+            font-size: 2rem;
+
+        }  
+        
+        body{
+                font-family: Arial, Helvetica, sans-serif;
+                overflow-x: hidden;
+        }
+
+        #content{
+            padding:1rem;
+            transition: 0.7s;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .slider a, .nav .close {
+            color: #000;
+            font-size: 2rem;
+            text-decoration: none;
+                
+        }
+
+        .nav .close{
+            position: absolute;
+            top: 8px;
+            right: 22px;
+            margin-left: 15px;
+            color: #eee;
+        }
+
+        .nav{
+            height: 0%;
+            width: 100%; /*Swap round heigth and width*/
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: black; 
+            overflow-x: hidden;
+            transition: 0.7s;
+        }
+            
+        .nav-items a {
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #EEE;
+
+        }
+            
+        .nav-items{
+            border-top: solid 1px #eee;
+        }
+
+        .nav-items :last-child{
+            border-bottom: solid 1px #eee;
+        }
+
+        .nav-items a div {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            text-align: center;
+        }
+
+        .nav-items div:hover {
+            background-color: black;
+            border-radius: 16px;
+            border: 2px solid;
+            border-style: solid;
+            height: auto;
+            width: auto;
+        }
+
+        .nav-items div:hover {
+            background-color: white;
+            color: black;
+            border-radius: 100px;
+            border: 2px solid;
+            border-style: solid;
+            height: auto;
+            width: auto;
+        }
+
+        .dark-mode {
+            background: rgba(34, 34, 34, 0.89);
+        }
+    </style>
+    <script>
+        function openSlideMenu(){
+            if(window.innerWidth > 900 ) {
+                document.getElementById("menu").style.height='26.3%';
+                document.getElementById("content").style.marginTop = '10%';      
+            }
+
+            else if(window.innerWidth <= 900) {
+                document.getElementById("menu").style.height='28.8%'; 
+                document.getElementById("content").style.marginTop = '10%';
+            }
+
+
+        }
+
+        function closeSlideMenu(){
+            document.getElementById("menu").style.height='0%';
+            document.getElementById("content").style.marginTop = '0%'; 
+        }
+
+        function switch_mode(){
+        const element1 = document.body;
+        const element2 = document.querySelector("footer");
+        const element3 = document.querySelector(".intro");
+        element1.classList.toggle('dark-mode');
+        element2.classList.toggle('dark-mode');
+        element3.classList.toggle('dark-mode');
+        }
+    </script>
+</head>
+
+<body>
+    <header id="NavigationBar" class="body template-bg template-border radius-all">
+        
+        <nav> 
+            <section> 
+            <a href="main.html"><img src="assets/imgs/Company Logo.jpg" id="logo" alt="Logo"></a> 
+            <a href="about us.html"><div>About us </div></a> 
+            <a href="Store.html"><div>Store</div></a> 
+            <a href="locations.html"><div>Locations</div></a> 
+            <a href="contacts.html"><div>Contacts</div></a> 
+            </section>   
+        </nav>
+
+        <section id="content">
+            <div class="slider">
+                <a href="#" onclick="openSlideMenu()">
+                    &#9776;
+                </a> 
+            </div>
+            
+            <section id="menu" class="nav">
+                <a href="#" class="close" onclick="closeSlideMenu()">
+                    X
+                </a>
+                <div class="nav-items">
+                    <a href="main.html">
+                        <center>
+                            <img src="assets/imgs/Company Logo.jpg" id="logo" alt="Logo">
+                        </center>
+                    </a> 
+                    <a href="about us.html"><div>About us </div></a> 
+                    <a href="Store.html"><div>Store</div></a> 
+                    <a href="locations.html"><div>Locations</div></a> 
+                    <a href="contacts.html"><div>Contacts</div></a> 
+                </div>
+             </section>
+    
+    </header>
+
+    <main>
+        <section class="intro">
+
+            <iframe id="map" src="https://www.google.com/maps/d/embed?mid=1Nc-ICAzSH0IISnYaaqJ72ltnXbwDzqM&ehbc=2E312F"></iframe>   
+        </section>
+    </main>
+
+    <footer>
+        <button onclick="switch_mode()">Dark/Light mode</button>
+    </footer>
+</body>

@@ -1,0 +1,202 @@
+body{
+    background-color: rgb(143, 189, 143);
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.radius-all {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+  
+  .template-bg {
+    background: #FFF;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+}
+  
+  .template-border {
+    border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+main{
+    align-items: center;
+    justify-content: center;
+    /* height: 550px; */
+}
+header {
+    background-color: #FFF;
+    width: 45vw;
+    display: block;
+    border: 2px dashed black;
+}
+
+nav { 
+    width: 45vw;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    height: 63px;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+}
+
+
+nav section a:last-child {
+    border: none;
+    
+}
+
+nav section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 45vw;
+    align-content: center;
+    align-items: center;
+}
+
+nav section a {
+    text-decoration: none;
+    border-right: 2px groove silver;
+    color: #000000;
+    font-size: 35px;
+    padding: 5px 20px;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+#logo {
+    background-image: url('logo.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-bottom: none;
+}
+
+nav section a:hover div {
+    background-color: darkseagreen;
+    border-radius: 10px;
+    border: 2px solid;
+    border-style: solid;
+    height: auto;
+    width: auto;
+}
+
+.intro {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    padding: 15px 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 2px dashed black;
+}
+
+.pricing {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    padding: 15px 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 2px dashed black;
+    max-width: 100%;
+}
+
+div#text {
+    font-size: 24px;
+}
+
+#example {
+    height: 456px;
+    width: auto;
+    align-content: center;
+    justify-content: center;
+    flex: auto;
+    flex-direction: column;
+}
+
+
+
+#content {
+    display: none;
+}
+
+#div text {
+    font-size: 24px;
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 20px;
+    background-color: #B5DB8F ;
+}
+
+
+@media screen and (max-width: 1800px) {
+    nav section{
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+    nav {
+        height: auto;
+        width: auto;
+    }
+
+    nav section a {
+        border-right: none
+    }
+    body {
+        flex-direction: column;
+        height: 600px;
+        width: auto;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+    }
+
+    #logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main{
+        width: auto;
+    }
+    #book_gifts_preview{
+        width: auto;
+    }
+
+    #example {
+        width: 400px;
+        height:  auto;
+    }
+}
+
+
+@media screen and (max-width: 1600px) {
+    #content {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    nav {
+        display: none;
+    }
+}
